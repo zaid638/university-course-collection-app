@@ -20,4 +20,5 @@ def get_content(url):
     body = soup.find("body")
     body_list = [i.text.strip().split('\n') for i in body]
     content_list = [k.strip() for j in body_list if j != [''] for k in j if j != '']
-    return content_list
+    content_list2 =  [text for text in content_list if text != '']
+    return content_list2
